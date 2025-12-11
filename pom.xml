@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.encryptor</groupId>
+  <artifactId>parallel_file</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>parallel_file</name>
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- keep these for compatibility, but plugin release is authoritative -->
+    <maven.compiler.source>22</maven.compiler.source>
+    <maven.compiler.target>22</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <!-- updated junit 4.x -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <!-- pluginManagement is okay to keep, but make sure plugin is active under <plugins> -->
+    <pluginManagement>
+      <plugins>
+        <!-- you can keep versions locked here if you like -->
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+      <!-- Compiler plugin configured to use Java 22 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+        <configuration>
+          <!-- 'release' ensures both API and bytecode match the target Java -->
+          <release>22</release>
+        </configuration>
+      </plugin>
+
+      <!-- Surefire for running tests (modern version) -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>
