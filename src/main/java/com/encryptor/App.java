@@ -6,6 +6,7 @@ package com.encryptor;
  */
 public class App 
 {
+    // Initial entry point for parallel file encryptor
     public static void main( String[] args )
     {
        String inputFile = "input.txt";
