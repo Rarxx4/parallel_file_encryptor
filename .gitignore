@@ -1,8 +1,9 @@
 # Maven
 target/
 
-# VS Code
-.vscode/
+# Compiled Java files
+*.class
 
-# OS files
-.DS_Store
+# IDE
+.vscode/
+.idea/
