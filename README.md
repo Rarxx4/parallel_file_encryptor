@@ -13,7 +13,8 @@ It demonstrates how large files can be encrypted more efficiently by splitting t
 - Combines encrypted chunks into a single output file  
 - Modular and extensible code structure  
 - JUnit support through Maven  
-- Decryption module planned for future updates  
+- Decryption module planned for future updates
+- applied operating system 
 
 ---
 
